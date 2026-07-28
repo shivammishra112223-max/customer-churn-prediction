@@ -3,14 +3,14 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Customer Churn Prediction</title>
+<title>Customer Churn Prediction</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
@@ -20,7 +20,7 @@
 
 <div class="row justify-content-center">
 
-<div class="col-lg-8">
+<div class="col-lg-10">
 
 <div class="card shadow-lg p-4">
 
@@ -36,83 +36,9 @@ Customer Churn Prediction
 
 <div class="col-md-6 mb-3">
 
-<label class="form-label">Credit Score</label>
-
-<input type="number" class="form-control" name="CreditScore" required>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Age</label>
-
-<input type="number" class="form-control" name="Age" required>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Tenure</label>
-
-<input type="number" class="form-control" name="Tenure" required>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Balance</label>
-
-<input type="number" class="form-control" name="Balance" required>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Number of Products</label>
-
-<input type="number" class="form-control" name="NumOfProducts" required>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Has Credit Card</label>
-
-<select class="form-select" name="HasCrCard">
-
-<option value="1">Yes</option>
-<option value="0">No</option>
-
-</select>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Is Active Member</label>
-
-<select class="form-select" name="IsActiveMember">
-
-<option value="1">Yes</option>
-<option value="0">No</option>
-
-</select>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
-<label class="form-label">Estimated Salary</label>
-
-<input type="number" class="form-control" name="EstimatedSalary" required>
-
-</div>
-
-<div class="col-md-6 mb-3">
-
 <label class="form-label">Gender</label>
 
-<select class="form-select" name="Gender">
+<select class="form-select" name="gender">
 
 <option value="1">Male</option>
 <option value="0">Female</option>
@@ -123,13 +49,243 @@ Customer Churn Prediction
 
 <div class="col-md-6 mb-3">
 
-<label class="form-label">Geography</label>
+<label class="form-label">Senior Citizen</label>
 
-<select class="form-select" name="Geography">
+<select class="form-select" name="SeniorCitizen">
 
-<option value="0">France</option>
-<option value="1">Germany</option>
-<option value="2">Spain</option>
+<option value="1">Yes</option>
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Partner</label>
+
+<select class="form-select" name="Partner">
+
+<option value="1">Yes</option>
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Dependents</label>
+
+<select class="form-select" name="Dependents">
+
+<option value="1">Yes</option>
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Tenure (Months)</label>
+
+<input
+type="number"
+class="form-control"
+name="tenure"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Phone Service</label>
+
+<select class="form-select" name="PhoneService">
+
+<option value="1">Yes</option>
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Paperless Billing</label>
+
+<select class="form-select" name="PaperlessBilling">
+
+<option value="1">Yes</option>
+<option value="0">No</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Monthly Charges</label>
+
+<input
+type="number"
+step="0.01"
+class="form-control"
+name="MonthlyCharges"
+required>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Total Charges</label>
+
+<input
+type="number"
+step="0.01"
+class="form-control"
+name="TotalCharges"
+required>
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Internet Service</label>
+
+<select class="form-select" name="InternetService">
+
+<option value="DSL">DSL</option>
+<option value="Fiber optic">Fiber optic</option>
+<option value="No">No</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Online Security</label>
+
+<select class="form-select" name="OnlineSecurity">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No internet service">No Internet Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Online Backup</label>
+
+<select class="form-select" name="OnlineBackup">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No internet service">No Internet Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Device Protection</label>
+
+<select class="form-select" name="DeviceProtection">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No internet service">No Internet Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Tech Support</label>
+
+<select class="form-select" name="TechSupport">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No internet service">No Internet Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Streaming TV</label>
+
+<select class="form-select" name="StreamingTV">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No internet service">No Internet Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Streaming Movies</label>
+
+<select class="form-select" name="StreamingMovies">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No internet service">No Internet Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Multiple Lines</label>
+
+<select class="form-select" name="MultipleLines">
+
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+<option value="No phone service">No Phone Service</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Contract</label>
+
+<select class="form-select" name="Contract">
+
+<option value="Month-to-month">Month-to-month</option>
+<option value="One year">One year</option>
+<option value="Two year">Two year</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">Payment Method</label>
+
+<select class="form-select" name="PaymentMethod">
+
+<option value="Electronic check">Electronic Check</option>
+<option value="Mailed check">Mailed Check</option>
+<option value="Bank transfer (automatic)">Bank Transfer</option>
+<option value="Credit card (automatic)">Credit Card</option>
 
 </select>
 
@@ -137,7 +293,9 @@ Customer Churn Prediction
 
 <div class="col-md-12">
 
-<button type="submit" class="btn btn-primary w-100">
+<button
+type="submit"
+class="btn btn-primary w-100">
 
 Predict Customer Churn
 
@@ -159,11 +317,11 @@ Predict Customer Churn
 
 <h4>❌ {{ prediction }}</h4>
 
-<p><strong>Probability:</strong> {{ probability }}%</p>
+<p><strong>Probability :</strong> {{ probability }}%</p>
 
-<p><strong>Confidence:</strong> {{ confidence }}</p>
+<p><strong>Confidence :</strong> {{ confidence }}</p>
 
-<p><strong>Status:</strong> Prediction Successful</p>
+<p><strong>Status :</strong> Prediction Successful</p>
 
 </div>
 
@@ -173,17 +331,15 @@ Predict Customer Churn
 
 <h4>✅ {{ prediction }}</h4>
 
-<p><strong>Probability:</strong> {{ probability }}%</p>
+<p><strong>Probability :</strong> {{ probability }}%</p>
 
-<p><strong>Confidence:</strong> {{ confidence }}</p>
+<p><strong>Confidence :</strong> {{ confidence }}</p>
 
-<p><strong>Status:</strong> Prediction Successful</p>
+<p><strong>Status :</strong> Prediction Successful</p>
 
 </div>
 
 {% endif %}
-
-</div>
 
 {% endif %}
 
@@ -198,3 +354,7 @@ Predict Customer Churn
 </body>
 
 </html>
+
+
+
+</div>

@@ -148,3 +148,4 @@ print("recal",Accuracy)
 
 model.save("customer_churn_ann.keras")
 joblib.dump(Scaler, "standard_scaler.pkl")
+joblib.dump(X.columns.tolist(), "feature_columns.pkl")
