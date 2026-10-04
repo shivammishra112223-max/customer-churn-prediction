@@ -42,7 +42,7 @@ App = Flask(__name__)
 #Load Trained Model
 #Load Scaler / Preprocessing Files
 
-model=load_model("customer_churn_ann.keras")
+model=load_model("customer_churn_ann.keras", compile=False)
 scaler=joblib.load("standard_scaler.pkl")
 feature_columns = joblib.load("feature_columns.pkl")
 
