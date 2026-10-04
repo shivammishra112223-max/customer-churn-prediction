@@ -9,6 +9,42 @@ import numpy as np
 import joblib
 
 
+# 1. Load Data
+# 2. Understand Data
+# 3. Drop Unnecessary Columns
+# 5. Remove Duplicates
+# 6. Fix Data Types
+# 8. Outlier Detection/Handling 
+# 9. Feature Engineering
+# 10. X / y Split
+# 11. Train-Test Split
+# 13. Pipeline start
+# 12. SimpleImputer
+# 13. Encoding
+# 14. Scaling
+# 15. ColumnTransformer
+# 17. Pipeline + Model
+# 18. fit()
+# 19. predict()
+# 20. Evaluation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Data=pd.read_csv(r"C:\Users\shiva\Downloads\archive (11)\WA_Fn-UseC_-Telco-Customer-Churn.csv")

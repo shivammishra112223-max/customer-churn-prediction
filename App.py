@@ -53,7 +53,7 @@ def home():
 @App.route("/predict", methods=["POST"])
 def predict():
     try:
-        gender = int(request.form["gender"])
+        
 
 #matlab ki user ka input recive karke pyhton flask me store karta h 
         gender = int(request.form["gender"])
