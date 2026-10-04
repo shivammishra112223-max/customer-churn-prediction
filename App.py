@@ -151,7 +151,7 @@ def predict():
 
 # Prediction 
 
-        prediction = model.predict(new_customer)
+        prediction = model.predict(new_customer, verbose=0)
 
         churn_probability = float(prediction[0][0]) * 100
 
@@ -194,7 +194,7 @@ def predict():
         return  f"something went wrongs:{e}"  
         
 if __name__ == "__main__":
-    App.run(debug=True)
+    App.run(host="0.0.0.0", port=5000)
     
     
 
